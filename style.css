@@ -1,1 +1,412 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1020;color:#edf2ff;line-height:1.7}.container{width:min(1100px,92%);margin:auto}.topbar{position:sticky;top:0;background:#111936ee;border-bottom:1px solid #263154;backdrop-filter:blur(10px);z-index:5}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:900;color:#fff;text-decoration:none}.logo span{color:#7dd3fc}.nav nav{display:flex;gap:22px}.nav nav a{color:#cbd5e1;text-decoration:none}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:70px 0}.badge,.category{color:#7dd3fc;font-weight:800;letter-spacing:.08em;font-size:13px}.hero h1,.article-wrap h1{font-size:clamp(34px,6vw,62px);line-height:1.08;margin:10px 0 18px}.lead{font-size:20px;color:#b8c4dc}.button{display:inline-block;background:#38bdf8;color:#06111d;padding:12px 20px;border-radius:10px;font-weight:800;text-decoration:none;margin-top:12px}.hero-card,.article-photo{border-radius:20px;overflow:hidden;border:1px solid #2a365b;background:#151e39}.placeholder{min-height:330px;display:grid;place-items:center;text-align:center;font-weight:900;letter-spacing:.1em;color:#7dd3fc;background:linear-gradient(135deg,#172554,#111827)}.section{padding:35px 0}.card{display:grid;grid-template-columns:260px 1fr;gap:24px;padding:20px;border:1px solid #273455;border-radius:18px;background:#111936}.thumb{min-height:180px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#0ea5e9,#312e81);font-size:38px;font-weight:900}.card h3{font-size:25px;line-height:1.25}.card a{color:#fff}.read{font-weight:800}.info{color:#cbd5e1}.article-wrap{max-width:850px;padding:55px 0}.article-wrap h1{font-size:clamp(36px,6vw,58px)}.meta,.caption{color:#94a3b8}.article-photo .placeholder{min-height:430px}.article-wrap p{font-size:18px}.article-wrap h2{margin-top:35px}.source{margin:35px 0;padding:20px;border-left:4px solid #38bdf8;background:#111936;border-radius:8px}.source small{color:#94a3b8}footer{margin-top:50px;border-top:1px solid #263154;padding:30px 0;color:#94a3b8}@media(max-width:750px){.hero{grid-template-columns:1fr;padding:45px 0}.nav nav{gap:10px;font-size:14px}.card{grid-template-columns:1fr}.thumb{min-height:140px}.article-photo .placeholder{min-height:260px}}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080e20;
+    color: #f4f7ff;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111a39;
+    border-bottom: 1px solid #26345b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo span,
+.footer-logo span {
+    color: #52c7ff;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar a {
+    color: #cbd3e8;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #55c8ff;
+}
+
+
+/* HERO */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 28px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.category,
+.section-heading span,
+.esports-content > span {
+    color: #55c9ff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.05;
+    margin: 18px 0 25px;
+}
+
+.hero p {
+    color: #adb8d2;
+    font-size: 19px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-button,
+.outline-button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero-button {
+    background: #45bdf5;
+    color: #071022;
+}
+
+.hero-image {
+    height: 480px;
+}
+
+.image-placeholder,
+.news-image,
+.player-photo {
+    background: linear-gradient(
+        135deg,
+        #16234c,
+        #0e1732
+    );
+    border: 1px solid #2a3a67;
+}
+
+.image-placeholder {
+    height: 100%;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #61cdfc;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* GENERAL SECTION */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 28px;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #9da9c4;
+    max-width: 650px;
+}
+
+
+/* NEWS */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.news-card {
+    overflow: hidden;
+    border-radius: 20px;
+    background: #111a39;
+    border: 1px solid #26365f;
+}
+
+.news-image {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #58c9ff;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.news-content {
+    padding: 23px;
+}
+
+.news-category {
+    color: #55c9ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.news-content h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.news-content p {
+    color: #9da9c4;
+    margin-bottom: 18px;
+}
+
+.news-content a {
+    color: #55c9ff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* ESPORTS */
+
+.esports-section {
+    margin: 40px auto;
+    max-width: 1144px;
+    padding: 80px 45px;
+    border-radius: 28px;
+    background: linear-gradient(
+        120deg,
+        #152451,
+        #0e1734
+    );
+    border: 1px solid #293a6a;
+}
+
+.esports-content h2 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.esports-content p {
+    color: #aeb9d1;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.outline-button {
+    border: 1px solid #55c9ff;
+    color: #55c9ff;
+}
+
+
+/* PLAYERS */
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.player-card {
+    background: #111a39;
+    border: 1px solid #26365f;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.player-card:hover {
+    transform: translateY(-6px);
+    border-color: #55c9ff;
+}
+
+.player-photo {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #55c9ff;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.player-info {
+    padding: 20px;
+}
+
+.player-info span {
+    color: #55c9ff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.player-info h3 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.player-info p {
+    color: #9da9c4;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    padding: 55px 25px 30px;
+    text-align: center;
+    background: #0d1530;
+    border-top: 1px solid #26345b;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+footer p {
+    color: #9da9c4;
+    margin: 15px auto;
+    max-width: 500px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #55c9ff;
+    text-decoration: none;
+}
+
+.copyright {
+    color: #68738e;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .esports-section {
+        margin: 20px;
+        padding: 55px 25px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .navbar nav {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .player-photo {
+        height: 330px;
+    }
+
+    .esports-content h2 {
+        font-size: 35px;
+    }
+
+  }
